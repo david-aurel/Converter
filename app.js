@@ -4,7 +4,9 @@ let kmInput         = document.querySelector("#km"),
     literInput      = document.querySelector("#liter"),
     cupsInput       = document.querySelector("#cups"),
     celsiusInput    = document.querySelector("#celsius"),
-    fahrenheitInput = document.querySelector("#fahrenheit");
+    fahrenheitInput = document.querySelector("#fahrenheit"),
+    euroInput       = document.querySelector("#euro"),
+    dollarInput     = document.querySelector("#dollar");
 
 
 // event listeners
@@ -32,6 +34,14 @@ fahrenheitInput.addEventListener('keyup', function(value) {
     fahrenheitToCelsius(fahrenheitInput.value);
 });
 
+euroInput.addEventListener('keyup', function(value) {
+    euroToDollar(euroInput.value);
+});
+
+dollarInput.addEventListener('keyup', function(value) {
+    dollarToEuro(dollarInput.value);
+});
+
 
 // km to miles
 function kmToMiles(km) {
@@ -56,5 +66,13 @@ function celsiusToFahrenheit(celsius) {
 // fahrenheit to celsius
 function fahrenheitToCelsius(fahrenheit) {
     celsiusInput.value = ((fahrenheit - 32) * (5/9)).toFixed(1);
+}; 
+// euro to dollar
+function euroToDollar(euro) {
+    dollarInput.value = (euro * 1.11504).toFixed(2);
+};
+// dollar to euro
+function dollarToEuro(dollar) {
+    euroInput.value = (dollar * 0.89683).toFixed(2);
 }; 
 
