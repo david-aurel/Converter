@@ -1,6 +1,9 @@
 body {
     background: lightsteelblue;
 }
+h2 {
+    font-family: "Comic Sans MS";
+}
 .container {
     background: white;
     width: 150px;
@@ -14,7 +17,9 @@ td {
 
 table {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-family: Arial;
+    font-size: 0.8em;
 }
 
 input {
