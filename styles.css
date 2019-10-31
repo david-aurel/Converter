@@ -4,6 +4,7 @@ body {
 h2 {
     font-family: "Comic Sans MS";
     font-size: 1.58em;
+    text-align: center;
 }
 
 .container {
