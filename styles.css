@@ -3,7 +3,9 @@ body {
 }
 h2 {
     font-family: "Comic Sans MS";
+    font-size: 1.58em;
 }
+
 .container {
     background: white;
     width: 150px;
