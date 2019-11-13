@@ -74,6 +74,7 @@ function setUnit (dropdown) {
     }) 
 
     dropdown.addEventListener('change', function(){
+        calculation(input.value, dropdown.value)
         setUnit(dropdown.value)
     })
     
