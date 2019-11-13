@@ -1,62 +1,82 @@
 // select everything
-let kmInput         = document.querySelector("#km"),
-    milesInput      = document.querySelector("#miles"),
-    literInput      = document.querySelector("#liter"),
-    cupsInput       = document.querySelector("#cups"),
-    celsiusInput    = document.querySelector("#celsius"),
-    fahrenheitInput = document.querySelector("#fahrenheit"),
-    euroInput       = document.querySelector("#euro"),
-    dollarInput     = document.querySelector("#dollar")
+let dropdown           = document.getElementById("dropdown"),
+    input              = document.getElementById("input"),
+    output             = document.getElementById("output"),
+    outputDisplay      = document.getElementById("outputDisplay")
+    
 
-
-// arrays to be used by the eventListener function
-let selector = [kmInput, milesInput, literInput, cupsInput, celsiusInput, fahrenheitInput, euroInput, dollarInput]
-let calculation = [kmToMiles, milesToKm, literToCups, cupsToLiters, celsiusToFahrenheit, fahrenheitToCelsius, euroToDollar, dollarToEuro]
-
-
-//functions for the calculations of the results
-function kmToMiles(km) {
-    milesInput.value = (km / 1.609).toFixed(2)
+//function for the calculations of the results
+function calculation(input, dropdown) {
+    //look at dropdown
+    switch(dropdown) {
+        //make cases
+        case "km":
+            //do calculation for each case
+            output.value = (input / 1.609).toFixed(2)
+        break
+        case "miles":
+            return output.value = (input * 1.609).toFixed(2)
+            outputDisplay.value = "km"
+        break
+        case "liter":
+            return  output.value = (input * 4.227).toFixed(2)
+            outputDisplay.value = "cups"
+        break
+        case "cups":
+            return output.value = (input / 4.227).toFixed(2)
+                outputDisplay.value = "liter"
+        break
+        case "C":
+            return output.value = ((input * (9/5)) + 32).toFixed(0)
+            outputDisplay.value = "˚F"
+        break
+        case "F":
+            return output.value = ((input / (9/5)) + 32).toFixed(0)
+            outputDisplay.value = "˚C"
+        break
+        case "euro":
+            return output.value = (input * 1.11504).toFixed(2)
+            outputDisplay.value = "dollar"
+        break
+        case "dollar":
+            return output.value = (input / 1.11504).toFixed(2)
+            outputDisplay.value = "euro"
+        break
+    }
 }
-function milesToKm(miles) {
-    kmInput.value = (miles * 1.609).toFixed(2)
-}
-function literToCups(liter) {
-    cupsInput.value = (liter * 4.227).toFixed(2)
-}
-function cupsToLiters(cups) {
-    literInput.value = (cups / 4.227).toFixed(2)
-}
-function celsiusToFahrenheit(celsius) {
-    fahrenheitInput.value = ((celsius * (9/5)) + 32).toFixed(0)
-}
-function fahrenheitToCelsius(fahrenheit) {
-    celsiusInput.value = ((fahrenheit - 32) * (5/9)).toFixed(1)
-} 
-function euroToDollar(euro) {
-    dollarInput.value = (euro * 1.11504).toFixed(2)
-}
-function dollarToEuro(dollar) {
-    euroInput.value = (dollar * 0.89683).toFixed(2)
-} 
 
+//function for setting the correct unit
+function setUnit (dropdown) {
+    switch (dropdown) {
+        case "km":
+            //set right unit to outputDisplay
+            return outputDisplay.textContent = "miles"
+        case "miles":
+            return outputDisplay.textContent = "km"
+        case "liter":
+            return outputDisplay.textContent = "cups"
+        case "cups":
+            return outputDisplay.textContent = "liter"
+        case "C":
+            return outputDisplay.textContent = "˚F"
+        case "F":                                                                                                                                                                                                           
+            return outputDisplay.textContent = "˚C"
+        case "euro":
+            return outputDisplay.textContent = "$"
+        case "dollar":
+            return outputDisplay.textContent = "€"
+    }
+}
 
-// function to make eventlistener
-function makeEventListener(input, convertFunction) {
-    input.addEventListener("keyup", function(value) {
-        convertFunction(input.value)
-    })    
-}    
+// eventlistener
+    input.addEventListener("keyup", function() {
+        calculation(input.value, dropdown.value)
+    }) 
 
-// function pass in the right arguments into the eventListener function
-function makeEventlistenerArguments(input, calculation) {
-    for (let i = 0; i < selector.length; i++) {
-        makeEventListener(input[i], calculation[i])
-    }    
-}    
-
-//call function to pass in arguments to make eventListener
-makeEventlistenerArguments(selector, calculation)
-
+    dropdown.addEventListener('change', function(){
+        calculation(input.value, dropdown.value)
+        setUnit(dropdown.value)
+    })
+    
 
 

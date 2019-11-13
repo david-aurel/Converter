@@ -10,53 +10,26 @@
 <body>
     <div class="container">
         <div class="content">
-            <h2>Europe-US converter <i class="fas fa-calculator"></i> </h2>
-        
+            <h2>Europe-US converter</h2>
             <div id="calculations">
-
-                <!-- km & miles  -->
-                    <div class="pair">
-                        <input id="km" type="text">
-                        <p>km</p>
-                    
-                        <input id="miles" type="text">
-                        <p>miles</p>
-                    </div>
-                        
-                <!-- liter & cups  -->
-                    <div class="pair">
-                        <input id="liter" type="text">
-                        <p>liter</p>
-                    
-                        <input id="cups" type="text">
-                        <p>cups</p>
-                    </div>
-    
-                <!-- celsius & fahrenheit  -->
-                    <div class="pair">
-                        <input id="celsius" type="text">
-                        <p>˚C</p>
-                    
-                        <input id="fahrenheit" type="text">
-                        <p>˚F</p>
-                    </div>
-    
-                <!-- euro & dollar  -->
-                    <div class="pair">
-                        <input id="euro" type="text">
-                        <p>€</p>
-                    
-                        <input id="dollar" type="text">
-                        <p>$</p>
-                    </div>
-
+                <input id="input" type="text">
+                <select name="value" id="dropdown">
+                    <option value="km" selected="selected">km   </option>
+                    <option value="miles">miles                 </option>
+                    <option value="liter">liter                 </option>
+                    <option value="cups">cups                   </option>
+                    <option value="C">˚C                        </option>
+                    <option value="F">˚F                        </option>
+                    <option value="euro">€                      </option>
+                    <option value="dollar">$                    </option>
+                </select>
+                <input id="output" type="text">
+                <p id="outputDisplay">miles</p>
             </div>
-
         </div>
     </div>
 
 
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/effa1431ca.js" crossorigin="anonymous"></script>
 </body>
 </html>
