@@ -1,18 +1,9 @@
-ç// select everything
-let kmInput         = document.querySelector("#km"),
-    milesInput      = document.querySelector("#miles"),
-    literInput      = document.querySelector("#liter"),
-    cupsInput       = document.querySelector("#cups"),
-    celsiusInput    = document.querySelector("#celsius"),
-    fahrenheitInput = document.querySelector("#fahrenheit"),
-    euroInput       = document.querySelector("#euro"),
-    dollarInput     = document.querySelector("#dollar")
-
-
-// arrays to be used by the eventListener function
-let selector = [kmInput, milesInput, literInput, cupsInput, celsiusInput, fahrenheitInput, euroInput, dollarInput]
-let calculation = [kmToMiles, milesToKm, literToCups, cupsToLiters, celsiusToFahrenheit, fahrenheitToCelsius, euroToDollar, dollarToEuro]
-
+// select everything
+let e           = document.getElementById("dropdown"),
+    userSelect  = e.options[e.selectedIndex].value,
+    input       = document.getElementById("input"
+    
+    console.log(input.value)
 
 //functions for the calculations of the results
 function kmToMiles(km) {
