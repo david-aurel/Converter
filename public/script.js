@@ -11,10 +11,10 @@ function calculation(input, dropdown) {
         case "miles":       return output.value = (input * 1.609).toFixed(2);           break
         case "liter":       return output.value = (input * 4.227).toFixed(2);           break
         case "cups":        return output.value = (input / 4.227).toFixed(2);           break
-        case "C":           return output.value = ((input * (9/5)) + 32).toFixed(0);    break
-        case "F":           return output.value = ((input / (9/5)) + 32).toFixed(0);    break
-        case "euro":        return output.value = (input * 1.11504).toFixed(2);         break
-        case "dollar":      return output.value = (input / 1.11504).toFixed(2);         break
+        case "˚C":          return output.value = ((input * (9/5)) + 32).toFixed(0);    break
+        case "˚F":          return output.value = ((input -32) * 5/9).toFixed(0);    break
+        case "€":           return output.value = (input * 1.101195).toFixed(2);         break
+        case "$":           return output.value = (input / 1.101195).toFixed(2);         break
     }
 }
 
