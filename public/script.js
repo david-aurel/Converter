@@ -13,7 +13,6 @@ function calculation(input, dropdown) {
         case "km":
             //do calculation for each case
             output.value = (input / 1.609).toFixed(2)
-            console.log("ok")
         break
         case "miles":
             return output.value = (input * 1.609).toFixed(2)
@@ -51,36 +50,32 @@ function setUnit (dropdown) {
     switch (dropdown) {
         case "km":
             //set right unit to outputDisplay
-            return outputDisplay.value = "miles"
+            return outputDisplay.textContent = "miles"
         case "miles":
-            //set right unit to outputDisplay
-            return outputDisplay.value = "km"
+            return outputDisplay.textContent = "km"
         case "liter":
-            //set right unit to outputDisplay
-            return outputDisplay.value = "cups"
+            return outputDisplay.textContent = "cups"
         case "cups":
-            //set right unit to outputDisplay
-            return outputDisplay.value = "liter"
+            return outputDisplay.textContent = "liter"
         case "C":
-            //set right unit to outputDisplay
-            return outputDisplay.value = "F"
-        case "F":
-            //set right unit to outputDisplay
-            return outputDisplay.value = "C"
+            return outputDisplay.textContent = "˚F"
+        case "F":                                                                                                                                                                                                           
+            return outputDisplay.textContent = "˚C"
         case "euro":
-            //set right unit to outputDisplay
-            return outputDisplay.value = "dollar"
+            return outputDisplay.textContent = "$"
         case "dollar":
-            //set right unit to outputDisplay
-            return outputDisplay.value = "euro"
+            return outputDisplay.textContent = "€"
     }
 }
 
 // eventlistener
-    input.addEventListener("keyup", function(value) {
+    input.addEventListener("keyup", function() {
         calculation(input.value, dropdown.value)
-        setUnit(dropdown.value)
     }) 
 
+    dropdown.addEventListener('change', function(){
+        setUnit(dropdown.value)
+    })
+    
 
 
