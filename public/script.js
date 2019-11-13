@@ -8,11 +8,12 @@ let dropdown           = document.getElementById("dropdown"),
 //function for the calculations of the results
 function calculation(input, dropdown) {
     //look at dropdown
-    switch(dropdown.value) {
+    switch(dropdown) {
         //make cases
         case "km":
             //do calculation for each case
-            return output.value = (input.value / 1.609).toFixed(2)
+            output.value = (input / 1.609).toFixed(2)
+            console.log("ok")
         break
         case "miles":
             return output.value = (input * 1.609).toFixed(2)
@@ -26,13 +27,13 @@ function calculation(input, dropdown) {
             return output.value = (input / 4.227).toFixed(2)
                 outputDisplay.value = "liter"
         break
-        case "F":
-            return output.value = ((input * (9/5)) + 32).toFixed(0)
-            outputDisplay.value = "˚C"
-        break
         case "C":
-            return output.value = ((input / (9/5)) + 32).toFixed(0)
+            return output.value = ((input * (9/5)) + 32).toFixed(0)
             outputDisplay.value = "˚F"
+        break
+        case "F":
+            return output.value = ((input / (9/5)) + 32).toFixed(0)
+            outputDisplay.value = "˚C"
         break
         case "euro":
             return output.value = (input * 1.11504).toFixed(2)
