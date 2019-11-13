@@ -20,7 +20,7 @@ function calculation(input, dropdown) {
 
 //function for setting the correct unit
 function setUnit (dropdown) {
-    let unitArr = ["km", "miles", "liter", "cups", "C", "F", "euro", "dollar"],
+    let unitArr = ["km", "miles", "liter", "cups", "˚C", "˚F", "€", "$"],
         index   = unitArr.indexOf(dropdown)
 
      return index % 2 === 0 ? outputDisplay.textContent = unitArr[index+1] : outputDisplay.textContent = unitArr[index-1]
