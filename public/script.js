@@ -1,4 +1,4 @@
-ç// select everything
+// select everything
 let kmInput         = document.querySelector("#km"),
     milesInput      = document.querySelector("#miles"),
     literInput      = document.querySelector("#liter"),
