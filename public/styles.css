@@ -44,6 +44,17 @@ input {
 	color:#8a97a0;
 }
 
+.select {
+    position: relative;
+    display: inline;
+}
+
+select {
+    appearance: none;
+    border: none;
+    color: #1abc9c;
+    font-size: 1.2em;
+}
 
 
 p {
