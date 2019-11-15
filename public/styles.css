@@ -9,6 +9,7 @@ h2 {
     font-size: 1.58em;
     margin: 0px;
     margin-bottom: 15px;
+    line-height: 1.3em;
 }
 
 .container {
@@ -19,8 +20,10 @@ h2 {
     border-radius: 8px;
 }
 
-.content {
+fieldset {
+    width: 100%;
     margin-bottom: 5px;
+    border: none;
 }
 
 #calculations {
@@ -30,9 +33,20 @@ h2 {
 
 input {
     width: 50%;
-    margin: 5px 0px;
+    margin: 5px 8px 0px 0px;
+    border: none;
+    border-radius: 4px;
+	font-size: 15px;
+    outline: 0;
+    padding: 4px 0px 5px 8px;
+	box-sizing: border-box;
+	background-color: #e8eeef;
+	color:#8a97a0;
 }
+
+
 
 p {
     display: inline;
+    font-size: 1.4em;
 }
