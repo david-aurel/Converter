@@ -1,19 +1,22 @@
 body {
-    background: rgba(0, 22, 68, 0.699);
+    background: #0c266dad;
+    color: #1abc9c;
+    /* color: #484848; */
+    font-family: Roboto, sans-serif;
 }
 
 h2 {
-    font-family: "Comic Sans MS";
     font-size: 1.58em;
     margin: 0px;
     margin-bottom: 15px;
 }
 
 .container {
-    background: white;
+    background: #f4f7f8;
     width: 150px;
     margin: 30px auto;
     padding: 20px;
+    border-radius: 8px;
 }
 
 .content {
@@ -22,7 +25,6 @@ h2 {
 
 #calculations {
     width: 100%;
-    font-family:Arial;
     font-size: 0.8em;
 }
 
