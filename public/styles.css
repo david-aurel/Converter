@@ -58,17 +58,23 @@ input {
 }
 
 select {
+    width: 100%;
     -webkit-appearance: none;
     background: transparent;
     border: none;
     font-size: 1.4em;
     color: #1abc9c;
-    padding-left: 8px;
+    padding-left: 5px;
+}
+
+select:focus {
+    outline: none;
 }
 
 .select span {
     position: relative;
-    bottom: 3px;
+    bottom: 18px;
+    left: 50px;
 }
 
 .p-wrapper {
@@ -76,7 +82,7 @@ select {
     align-items: center;
     height: 25px;
     width: 60px;
-    padding-left: 8px;
+    padding-left: 5px;
     font-size: 1.4em;
     border-bottom: 2px solid #e8eeef;
     border-radius: 5px;
