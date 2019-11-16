@@ -52,25 +52,31 @@ input {
 .select {
     height: 25px;
     width: 66px;
-    overflow: hidden;
     border: none;
     border-bottom: 2px solid #e8eeef;
     border-radius: 2px;
-    color: #1abc9c;
-    font-size: 1.4em;
 }
 
 select {
-    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    font-size: 1.4em;
+    color: #1abc9c;
+    padding-left: 8px;
 }
 
+.select span {
+    position: relative;
+    bottom: 3px;
+}
 
 .p-wrapper {
     display: inline-flex;
     align-items: center;
     height: 25px;
     width: 60px;
-    padding-left: 7px;
+    padding-left: 8px;
     font-size: 1.4em;
     border-bottom: 2px solid #e8eeef;
     border-radius: 5px;
