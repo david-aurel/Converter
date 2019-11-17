@@ -46,7 +46,7 @@ input {
     padding: 4px 0px 5px 8px;
 	box-sizing: border-box;
 	background-color: #e8eeef;
-	color:#8a97a0;
+    color:#8a97a0;
 }
 
 .select {
@@ -60,7 +60,9 @@ input {
 select {
     width: 100%;
     -webkit-appearance: none;
-    background: transparent;
+    background: url("font-awesome_4-7-0_sort-down_30_0_1abc9c_none.png") no-repeat;
+    background-size: 15%;
+    background-position: bottom 40% right 10%;
     border: none;
     font-size: 1.4em;
     color: #1abc9c;
