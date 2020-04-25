@@ -1,9 +1,21 @@
-![Gif of Project](converter.gif)
-# Metric Converter
+This is a sentimental one, as it marks the beginning of what would become my passion for web development. Finding myself constantly struggling with conversions for km, miles, liter, cups, ˚C, ˚F, € and \$, I made this converter.
 
-**Tool to convert units like km, miles, liter, cups, ˚C, ˚F, € and $, vanilla Javascript.**
+[europe-us-converter.herokuapp.com](https://europe-us-converter.herokuapp.com/)
 
-This was my first ever project that I did on my own, not following an online tutorial etc. and marked the beginning of what would become my passion for coding.
+---
 
-- Javascript DOM manipulation to display the results
-- The conversion rate for the currencies come from a currency API
+This project is special to me, because it was the first time I was sitting down to create something on my own, without following a tutorial or instructions.
+
+After watching a speech on great UI, I styled it, and needless to say, felt invincible when it all came together working in the end.
+
+![img](./readme_images/start.png)
+
+---
+
+### Logic
+
+This project was written in vanilla HTML, CSS and JavaScript. A currency API provides the conversion rate for \$ and €.
+
+![img](./readme_images/converter.gif)
+
+---
